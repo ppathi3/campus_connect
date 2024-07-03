@@ -1,0 +1,15 @@
+<%- include('./partials/header.ejs') %>
+  <main class="error">
+    <section class="main-content">
+      <img src=" /images/index.jpg" alt="Campus Connect">
+      <div class="text-content">
+        <h2>
+          <%= error.status %>
+        </h2>
+        <p>
+          <%= error.message %>
+        </p>
+      </div>
+    </section>
+  </main>
+  <%- include('./partials/footer.ejs') %>

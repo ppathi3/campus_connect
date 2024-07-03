@@ -1,0 +1,37 @@
+/* Styles : Events page */
+.events{
+h2, p {
+    text-align: center;
+}
+.category {
+    display: flex;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.4s ease-in-out;
+    align-items: center;
+    justify-content: center;
+
+    a {
+        color: black;
+        font-weight: 800;
+    }
+    h2 {
+        color: #3a868f;
+        font-size: xx-large;
+    }
+}
+
+.category:hover {
+    transform: translateY(-10px);
+    background-color: rgb(152, 235, 235);
+    a {
+        color: white;
+    }
+    h2 {
+        color:black;
+    }
+}
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Connect - New Event</title>
+    <link rel="stylesheet" href="../css/commonStyles.css">
+    <link rel="stylesheet" href="../css/newEvent.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="brand-info">
+                <a href="index.html"><img src="../images/logo-6.png" alt="Campus Connect Logo"></a>
+                <h2>Your Gateway to Global Learning!</h2>
+            </div>
+                <div class="user-specific-links">
+                    <a href="newEvent.html">New Event</a>
+                    <a href="#">Sign Up</a>
+                    <a href="#">Log In</a>
+                </div>
+                <div class="divider"></div>
+                <div class="general-site-links">
+                <a href="index.html">Home</a>
+                <a href="events.html">Events</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h2>Create a New Event</h2>
+            <form action="#" method="POST" class="main-form">
+                <div class="form-column">
+                <label for="title">Event Title:</label>
+                <input type="text" id="title" name="title" required>
+                
+                <label for="host">Host Name:</label>
+                <input type="text" id="host" name="host" required>
+                
+                <label for="start">Start Date and Time:</label>
+                <input type="datetime-local" id="start" name="start" required>
+                
+                <label for="end">End Date and Time:</label>
+                <input type="datetime-local" id="end" name="end" required>
+                
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required>
+            </div>
+            <div class="form-column">
+                <label for="category">Category:</label>
+                <select id="category" name="category" required>
+                    <option value="" disabled selected>Select a category</option>
+                    <option value="social">Social Gatherings</option>
+                    <option value="academic">Academic Workshops</option>
+                    <option value="cultural">Cultural Activities</option>
+                    <option value="sports">Sports/Recreation</option>
+                    <option value="career">Career Coaching</option>
+                    <option value="other">Other</option>
+                </select>
+                
+                <label for="description">Event Description:</label>
+                <textarea id="description" name="description" required></textarea>
+                
+                <label for="image">Event Image:</label>
+                <input type="file" id="image" name="image" accept="image/*" required>
+
+                <p><strong>Is this event free?</strong></p>
+                <label><input type="radio" name="Free" value="Free" checked> Free</label>
+                <label><input type="radio" name="Paid" value="Paid" class="paid-radio"> Paid</label>
+            
+                    <label for="entry-fee"><strong>Entry Fee:</strong></label>
+                    <input type="number" id="entry-fee" name="entry-fee" placeholder="Enter fee amount (if paid event)">
+                </div>
+                <button type="submit">Create Event</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-links">
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2024 Campus Connect. All rights reserved.</p>
+    </footer>
+</body>
+</html>

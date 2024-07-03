@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Connect - Home</title>
+    <link rel="stylesheet" href="/css/commonStyles.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/event.css">
+    <link rel="stylesheet" href="/css/events.css">
+    <link rel="stylesheet" href="/css/newEvent.css">
+    <link rel="stylesheet" href="/css/user.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-top">
+            <div class="brand-info">
+                <a href='/'><img src="/images/logo-6.png" alt="Campus Connect Logo"></a>
+                <h2>Your Gateway to Global Learning!</h2>
+            </div>
+                <div class="user-specific-links">
+                    <%if(!user){%>
+                        <a href="/users/signup">Sign Up</a>
+                        <a href="/users/login">Log In</a>
+                    <%} else {%>
+                        <a href="/events/new">New Event</a>
+                        <a href="/users/profile"><%= userName + '\'s' %> Profile</a>
+                        <a href="/users/logout">Logout</a>
+                    <%}%>
+                </div>
+                <div class="divider"></div>
+                <div class="general-site-links">
+                <a href='/'>Home</a>
+                <a href='/events'>Events</a>
+            </div>
+        </div>
+    </header>
+
+    <%if(errorMessages.length > 0) {
+        errorMessages.forEach(message => {%>
+            <div class="error-msg"> <%=message%> </div>
+        <%})
+    }%>
+    <%if(successMessages.length > 0) {
+        successMessages.forEach(message => {%>
+            <div class="success-msg"> <%=message%> </div>
+        <%})
+    }%>

@@ -1,0 +1,75 @@
+/* Styles : Event page */
+.event-detail {
+    display: flex;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.4s ease-in-out;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+     h2 {
+        color: #3a868f;
+        text-align: center;
+        font-size: xx-large;
+    }
+    
+     img {
+        max-width: 40%;
+        height: auto;
+    }
+    
+     p {
+        margin-bottom: 10px;
+    }
+    
+    .rsvp-buttons {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+    
+     .buttons {
+        display: flex;
+        justify-content: center;
+    }
+    
+     button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        color: white;
+        width: fit-content;
+        align-self: center;
+    }
+
+    button.yes-btn {
+        background-color: green;
+    }
+    button.yes-btn:hover{
+        color: green;
+        background-color: #fff;
+        border: 2px solid green;
+    }
+    button.no-btn {
+        background-color: red;
+    }
+    button.no-btn:hover {
+        color: red;
+        border: 2px solid red;
+        background-color: #fff;
+    }
+    button.maybe-btn {
+        background-color: blue;
+    }
+    button.maybe-btn:hover {
+        color: blue;
+        border: 2px solid blue;
+        background-color: #fff;
+    }
+    }
+}
+

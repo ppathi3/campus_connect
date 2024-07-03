@@ -1,0 +1,142 @@
+/* Common Styles for header and footer */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    padding: 0px;
+    /* Removing default padding and margins to achieve full width*/
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Setting minimum height of the body to 100% of viewport height */
+    font-family: 'Montserrat', sans-serif;
+    ;
+}
+
+/* Header Styles */
+header {
+    background-color: #3a868f;
+    /* Dark background color */
+    color: #fff;
+    /* White color to highlight text in blue background*/
+    padding: 10px;
+
+    img {
+        max-width: 200px;
+        max-height: 200px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    img:hover {
+        transform: rotate(180deg);
+    }
+}
+
+.header-top {
+    display: flex;
+    flex-direction: column;
+
+    .divider {
+        border: 1px solid;
+    }
+
+    .brand-info {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .general-site-links,
+    .user-specific-links {
+        display: flex;
+        gap: 30px;
+
+        a {
+            color: white;
+            text-decoration: none;
+            /* Removing underline from links */
+            transition: color 0.3s ease-in-out;
+        }
+
+        a:hover {
+            color: #ffc107;
+        }
+    }
+
+    .general-site-links {
+        margin-left: 30px;
+        margin-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    .user-specific-links {
+        margin-right: 30px;
+        justify-content: flex-end;
+        padding-bottom: 10px;
+    }
+}
+
+/* Footer Styles */
+footer {
+    display: flex;
+    background: #3a868f;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-top: auto;
+    justify-content: space-between;
+    align-items: center;
+    /* Pushing footer to the bottom */
+
+    .footer-links {
+        margin-left: 20px;
+        display: flex;
+        gap: 50px;
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #ffc107;
+        }
+    }
+
+    .social-icons {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-self: flex-end;
+        a {
+            font-size: xx-large;
+            color: white;
+        }
+
+        a:hover {
+            color: #ffc107;
+        }
+    }
+
+    p {
+        align-self: flex-end;
+        font-size: small;
+        margin-right: 20px;
+    }
+}
+
+/* Flash message styles */
+
+.success-msg {
+    background: green;
+    color: #fff;
+    text-align: center;
+    padding: 10px 10px;
+    margin-top: 20px;
+}
+
+.error-msg {
+    background: red;
+    color: #fff;
+    text-align: center;
+    padding: 10px 10px;
+    margin-top: 20px;
+}

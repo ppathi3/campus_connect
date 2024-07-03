@@ -1,0 +1,85 @@
+.profile {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+  .event-list {
+    margin-top: 10px;
+  }
+
+  .event-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .event-item p {
+    margin: 0;
+    color: black;
+  }
+
+  .event-buttons-form {
+    display: inline-block;
+  }
+
+  .edit-button,
+  .delete-button {
+    background-color: #3a868f;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  .edit-button:hover,
+  .delete-button:hover {
+    background-color: #ffc107;
+  }
+
+  .delete-button {
+    background-color: red;
+    ;
+  }
+
+  .edit-button i,
+  .delete-button i {
+    margin-right: 5px;
+  }
+
+  .event-list:hover, .rsvp-list:hover {
+    transform: translateY(-10px);
+    background-color: rgb(152, 235, 235);
+
+    a {
+      color: white;
+    }
+
+    h2 {
+      color: black;
+    }
+  }
+  .event-headers,
+  .rsvp-headers {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.login-page,
+.signup-page {
+  width: 30%;
+
+  input {
+    margin-bottom: 0px;
+  }
+}

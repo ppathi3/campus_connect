@@ -1,0 +1,67 @@
+<%- include('../partials/header.ejs') %>
+    <main class="editEvent">
+        <section>
+            <h2>Edit an Event</h2>
+            <form action="/events/<%= event._id%>?_method=PUT" method="POST" enctype="multipart/form-data"
+                class="main-form">
+                <div class="form-column">
+                    <label for="title">Event Title:</label>
+                    <input type="text" id="title" name="title" value="<%= event.title %>" required>
+
+                    <label for="start">Start Date and Time:</label>
+                    <input type="datetime-local" id="start" name="startDate" value="<%= event.startDate %>" required>
+
+                    <label for="end">End Date and Time:</label>
+                    <input type="datetime-local" id="end" name="endDate" value="<%= event.endDate %>" required>
+
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" name="location" value="<%= event.location %>" required>
+
+                    <label for="image">Event Image:</label>
+                    <input type="file" id="image" name="image" accept="image/*">
+                </div>
+                <div class="form-column">
+                    <label for="category">Category:</label>
+                    <select id="category" name="category" required>
+                        <option value="" disabled <% if (!event.category) { %>selected<% } %>>Select a category</option>
+                        <option value="Social Gatherings" <% if (event.category==='Social Gatherings' ) { %>selected<% }
+                                %>>Social Gatherings</option>
+                        <option value="Academic Workshops" <% if (event.category==='Academic Workshops' ) { %>selected<%
+                                } %>>Academic Workshops</option>
+                        <option value="Cultural Activities" <% if (event.category==='Cultural Activities' ) { %>selected
+                            <% } %>>Cultural Activities</option>
+                        <option value="Sports/Recreation" <% if (event.category==='Sports/Recreation' ) { %>selected<% }
+                                %>>Sports/Recreation</option>
+                        <option value="Career Coaching" <% if (event.category==='Career Coaching' ) { %>selected<% } %>
+                                >Career Coaching</option>
+                        <option value="Other" <% if (event.category==='Other' ) { %>selected<% } %>>Other</option>
+                    </select>
+
+
+                    <label for="description">Event Description:</label>
+                    <input type="text" id="description" name="description" value="<%= event.description %>" required
+                        minlength="25"></input>
+
+                    <p><strong>Is this event free?</strong></p>
+                    <label>
+                        <input type="radio" name="eventType" id="free-event" value="Free" <% if
+                            (event.eventType==='Free' ) { %>checked<% } %>> Free
+                    </label>
+                    <label>
+                        <input type="radio" name="eventType" id="paid-event" value="Paid" <% if
+                            (event.eventType==='Paid' ) { %>checked<% } %> class="paid-radio"> Paid
+                    </label>
+
+
+                    <label for="entry-fee"><strong>Entry Fee:</strong></label>
+                    <input type="number" id="entry-fee" name="entryFee" value="<%= event.entryFee %>"
+                        placeholder="Enter fee amount (if paid event)" <% if (event.eventType==='Free' ) { %>disabled<%
+                        } %>>
+                        <!-- Load the external JavaScript file -->
+                        <script src="/js/disableEntryFee.js"></script>
+                </div>
+                <button type="submit">Save Event</button>
+            </form>
+        </section>
+    </main>
+    <%- include('../partials/footer.ejs') %>

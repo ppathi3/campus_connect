@@ -1,0 +1,49 @@
+<%- include('../partials/header.ejs') %>
+    <main>
+        <section class="event-detail">
+            <h2>
+                <%= event.title %>
+            </h2>
+            <div class="rsvp-buttons">
+                <h3>Going?</h3>
+            <!-- RSVP Buttons -->
+            <form action="/events/<%=event._id%>/rsvp" method="POST">
+                <button type="submit" name="status" value="YES" class="yes-btn">Yes</button>
+                <button type="submit" name="status" value="NO" class="no-btn">No</button>
+                <button type="submit" name="status" value="MAYBE" class="maybe-btn">Maybe</button>
+            </form>
+        </div>
+            </div>
+            <img src="<%= event.image %>" alt="Event Image">
+            <p><strong>Host:</strong>
+                <%= event.host.firstName + ' ' + event.host.lastName %>
+            </p>
+            <p><strong>Start Date and Time:</strong>
+                <%= event.startDate %>
+            </p>
+            <p><strong>End Date and Time:</strong>
+                <%= event.endDate %>
+            </p>
+            <p><strong>Category:</strong>
+                <%= event.category %>
+            </p>
+            <p><strong>Location:</strong>
+                <%= event.location %>
+            </p>
+            <p><strong>Description:</strong>
+                <%= event.description %>
+            </p>
+            <p><strong>Event type:</strong>
+                <%= event.eventType %>
+            </p>
+            <% if (event.eventType==='Paid' ){%>
+                <p><strong>Entry fee:</strong>
+                    <%= event.entryFee %>$
+                </p>
+                <% }%>
+                <p><strong>Number of RSVP's:</strong>
+                    <%= rsvpCount %>
+                </p>
+        </section>
+    </main>
+    <%- include('../partials/footer.ejs') %>
